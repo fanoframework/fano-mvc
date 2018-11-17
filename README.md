@@ -101,9 +101,9 @@ For example on Apache,
 ```
 <VirtualHost *:80>
      ServerName www.example.com
-     DocumentRoot /home/example/app/public
+     DocumentRoot /home/example/fano-mvc/public
 
-     <Directory "/home/example/app/public">
+     <Directory "/home/example/fano-mvc/public">
          Options +ExecCGI
          AllowOverride FileInfo
          Require all granted
@@ -138,7 +138,7 @@ Content of `.htaccess` basically tells Apache to serve existing files/directorie
 ### Simulate run on command line
 
 ```
-$ cd app/public
+$ cd public
 $ REQUEST_METHOD=GET \
   REQUEST_URI=/test/test \
   SERVER_NAME=juhara.com \
@@ -178,7 +178,7 @@ and `storages` directories to your deployment machine. make sure that
 When running `build.sh` script, you may encounter following warning:
 
 ```
-/usr/bin/ld: warning: app/public/link.res contains output sections; did you forget -T?
+/usr/bin/ld: warning: public/link.res contains output sections; did you forget -T?
 ```
 
 This is known issue between FreePascal and GNU Linker. See
