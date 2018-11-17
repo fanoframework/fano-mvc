@@ -1,1 +1,4 @@
-{ "appName" : "MyApp" }
+{
+    "appName" : "Fano Web Framework",
+    "baseUrl" : "http://fano.com"
+}

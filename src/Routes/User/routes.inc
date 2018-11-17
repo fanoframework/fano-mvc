@@ -5,6 +5,5 @@
  * @copyright Copyright (c) [[COPYRIGHT_YEAR]] [[COPYRIGHT_HOLDER]]
  * @license   [[LICENSE_URL]] ([[LICENSE]])
  *------------------------------------------------------------- *)
-{---put your routes registration here---}
-{ router.get('/', THomeControllerFactory.create()); }
-{$INCLUDE User/routes.inc}
+
+router.get('/user', container.get('userController') as IRouteHandler);

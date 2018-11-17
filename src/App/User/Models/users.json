@@ -1,0 +1,15 @@
+{
+    "totalRecords" : 2,
+    "records" : [
+        {
+            "id" : 1,
+            "name" : "Joko Widowo",
+            "email" : "joko@widowo.com"
+        },
+        {
+            "id" : 2,
+            "name" : "Pradowo Subianto",
+            "email" : "pradowo@subianto.com"
+        }
+    ]
+}

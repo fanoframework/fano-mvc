@@ -32,3 +32,13 @@
          container.get('router') as IRouteMatcher
      )
  );
+
+ {-----------------------------------------------
+   register application configuration
+ ------------------------------------------------}
+ container.add(
+     'config',
+     TJsonFileConfigFactory.create(
+         extractFileDir(getCurrentDir()) + '/src/config/config.json'
+     )
+ );

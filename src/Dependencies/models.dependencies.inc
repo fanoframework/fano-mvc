@@ -5,6 +5,9 @@
  * @copyright Copyright (c) [[COPYRIGHT_YEAR]] [[COPYRIGHT_HOLDER]]
  * @license   [[LICENSE_URL]] ([[LICENSE]])
  *------------------------------------------------------------- *)
-{---put your routes registration here---}
-{ router.get('/', THomeControllerFactory.create()); }
-{$INCLUDE User/routes.inc}
+
+{%dependencies.inc}
+
+{---put your dependencies registration here---}
+
+container.add('user.list', TUserModelFactory.create());
