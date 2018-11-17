@@ -15,7 +15,7 @@ uses
 type
 
     (*!-----------------------------------------------
-     * Factory for controller TUserListingView
+     * Factory for view TUserListingView
      *
      * @author Zamrony P. Juhara <zamronypj@yahoo.com>
      *------------------------------------------------*)
