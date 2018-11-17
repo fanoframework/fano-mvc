@@ -1,0 +1,67 @@
+#------------------------------------------------------------
+# [[APP_NAME]] ([[APP_URL]])
+#
+# @link      [[APP_REPOSITORY_URL]]
+# @copyright Copyright (c) [[COPYRIGHT_YEAR]] [[COPYRIGHT_HOLDER]]
+# @license   [[LICENSE_URL]] ([[LICENSE]])
+#-------------------------------------------------------------
+
+#----------------------------------------------
+# Ignore any application configuration
+#----------------------------------------------
+src/config/config.json
+
+#----------------------------------------------
+# Ignore Apache any configuration
+#----------------------------------------------
+public/.htaccess
+
+#----------------------------------------------
+# Ignore generated binary executable
+#----------------------------------------------
+public/app.cgi
+cgi-bin/app.cgi
+
+#----------------------------------------------
+# Ignore generated log files
+#----------------------------------------------
+storages/logs/*
+
+#----------------------------------------------
+# Do not ignore README.md
+# This file is provided so Git can create
+# storages/logs directory when this repository
+# is cloned.
+#----------------------------------------------
+!storages/logs/README.md
+
+#----------------------------------------------
+# Ignore compiler switches configurations
+#----------------------------------------------
+build.cfg
+build.dev.cfg
+build.prod.cfg
+
+#----------------------------------------------
+# Ignore all generated compiled units files
+#----------------------------------------------
+bin/unit/*
+
+#----------------------------------------------
+# Do not ignore README.md
+# This file is provided so Git can create
+# bin/unit directory when this repository
+# is cloned.
+#----------------------------------------------
+!bin/README.md
+!bin/unit/README.md
+
+#----------------------------------------------
+# Ignore FreePascal built-in console IDE generated files
+#----------------------------------------------
+fp.dir
+
+#----------------------------------------------
+# Ignore Lazarus local files (user-specific info)
+#----------------------------------------------
+*.lps

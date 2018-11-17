@@ -1,0 +1,82 @@
+#------------------------------------------------------------
+# [[APP_NAME]] ([[APP_URL]])
+#
+# @link      [[APP_REPOSITORY_URL]]
+# @copyright Copyright (c) [[COPYRIGHT_YEAR]] [[COPYRIGHT_HOLDER]]
+# @license   [[LICENSE_URL]] ([[LICENSE]])
+#--------------------------------------------------------------
+
+#----------------------------------------------
+# User configuration for development build
+# Please see FreePascal Documentation for available
+# compiler switch configurations
+#----------------------------------------------
+
+#----------------------------------------------
+# halt compiler after error, warning and notes
+#----------------------------------------------
+-Sewn
+
+#----------------------------------------------
+# Generate debugging information for debugging with gdb.
+# For production, this should be commented out
+#----------------------------------------------
+-g
+
+#----------------------------------------------
+# Generate debugging information for debugging with gdb.
+#----------------------------------------------
+-gl
+
+#----------------------------------------------
+# Turn on heap trace for checking memory leak.
+#----------------------------------------------
+#-gh
+
+#----------------------------------------------
+# Check and assertion for I/O
+#----------------------------------------------
+-Ci
+
+#----------------------------------------------
+# Check and assertion for range
+#----------------------------------------------
+-Cr
+
+#----------------------------------------------
+# Check and assertion for overflow
+#----------------------------------------------
+-Co
+
+#----------------------------------------------
+# Check and assertion for stack
+#----------------------------------------------
+-Ct
+
+#----------------------------------------------
+# Check and assertion for method call verification
+#----------------------------------------------
+-CR
+
+#----------------------------------------------
+# include assertion code
+#----------------------------------------------
+-Sa
+
+#----------------------------------------------
+# verbose for debugging purpose
+#----------------------------------------------
+-vd
+
+#----------------------------------------------
+# Verbosity, show errors (e), warning (w), notes (n), hints (h)
+#----------------------------------------------
+-Vewnh
+
+#----------------------------------------------
+# Verbose unit searching info,
+# Remove comment, in case unit file is not found
+# so FreePascal will output verbose message where
+# it tries to look for unit file
+#----------------------------------------------
+#-vut

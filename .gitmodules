@@ -1,0 +1,3 @@
+[submodule "vendor/fano"]
+	path = vendor/fano
+	url = https://github.com/fanoframework/fano.git
