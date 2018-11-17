@@ -1,9 +1,9 @@
 REM------------------------------------------------------------
-REM [[APP_NAME]] ([[APP_URL]])
+REM Fano MVC Sample Application (https://fanoframework.github.io)
 REM
-REM @link      [[APP_REPOSITORY_URL]]
-REM @copyright Copyright (c) [[COPYRIGHT_YEAR]] [[COPYRIGHT_HOLDER]]
-REM @license   [[LICENSE_URL]] ([[LICENSE]])
+REM @link      https://github.com/fanoframework/fano-mvc.git
+REM @copyright Copyright (c) 2018 Zamrony P. Juhara
+REM @license   https://github.com/fanoframework/fano-mvc/blob/master/LICENSE (GPL 3.0)
 REM-------------------------------------------------------------
 
 REM ------------------------------------

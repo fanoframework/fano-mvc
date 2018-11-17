@@ -1,9 +1,9 @@
 (*!------------------------------------------------------------
- * [[APP_NAME]] ([[APP_URL]])
+ * Fano MVC Sample Application (https://fanoframework.github.io)
  *
- * @link      [[APP_REPOSITORY_URL]]
- * @copyright Copyright (c) [[COPYRIGHT_YEAR]] [[COPYRIGHT_HOLDER]]
- * @license   [[LICENSE_URL]] ([[LICENSE]])
+ * @link      https://github.com/fanoframework/fano-mvc.git
+ * @copyright Copyright (c) 2018 Zamrony P. Juhara
+ * @license   https://github.com/fanoframework/fano-mvc/blob/master/LICENSE (GPL 3.0)
  *------------------------------------------------------------- *)
 unit UserController;
 
