@@ -78,11 +78,10 @@ implementation
         const viewParams : IViewParameters;
         const response : IResponse
     ) : IResponse;
-    var resp :IResponse;
     begin
-        resp := headerView.render(viewParams, response);
-        resp := contentView.render(viewParams, resp);
-        result := footerView.render(viewParams, resp);
+        result := headerView.render(viewParams, response);
+        result := contentView.render(viewParams, result);
+        result := footerView.render(viewParams, result);
     end;
 
 end.
