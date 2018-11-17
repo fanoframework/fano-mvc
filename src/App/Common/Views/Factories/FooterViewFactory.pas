@@ -15,7 +15,7 @@ uses
 type
 
     (*!-----------------------------------------------
-     * Factory for header view
+     * Factory for footer view
      *
      * @author Zamrony P. Juhara <zamronypj@yahoo.com>
      *------------------------------------------------*)
