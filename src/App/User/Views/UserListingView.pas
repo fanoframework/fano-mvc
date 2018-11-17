@@ -66,12 +66,10 @@ implementation
     ) : IResponse;
     var userData : IModelReadOnlyData;
         respBody : IResponseStream;
-        numOfUser : integer;
     begin
         userData := userModel.data();
         respBody := response.body();
-        numOfUser := userData.count();
-        if (numOfUser > 0) then
+        if (userData.count() > 0) then
         begin
             respBody.write(
                 '<div class="container has-text-centered">' +
