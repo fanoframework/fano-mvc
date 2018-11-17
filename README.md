@@ -131,7 +131,7 @@ Depending on your server setup, for example, if  you use `.htaccess`, add follow
     RewriteRule ^(.*)$ app.cgi [L]
 </IfModule>
 ```
-and put `.htaccess` file in same directory as `app.cgi` file (i.e., in `app/public` directory).
+and put `.htaccess` file in same directory as `app.cgi` file (i.e., in `public` directory).
 
 Content of `.htaccess` basically tells Apache to serve existing files/directories directly. For any non-existing files/directories, pass them to our application.
 
