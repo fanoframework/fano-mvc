@@ -21,7 +21,7 @@ type
      *
      * See Routes/User/routes.inc
      *
-     * @author [[AUTHOR_NAME]] <[[AUTHOR_EMAIL]]>
+     * @author Zamrony P. Juhara <zamronypj@yahoo.com>
      *------------------------------------------------*)
     TUserController = class(TController, IDependency)
     private

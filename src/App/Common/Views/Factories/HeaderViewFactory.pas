@@ -17,7 +17,7 @@ type
     (*!-----------------------------------------------
      * Factory for header view
      *
-     * @author [[AUTHOR_NAME]] <[[AUTHOR_EMAIL]]>
+     * @author Zamrony P. Juhara <zamronypj@yahoo.com>
      *------------------------------------------------*)
     THeaderViewFactory = class(TFactory)
     public

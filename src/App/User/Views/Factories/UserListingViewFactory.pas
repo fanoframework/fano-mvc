@@ -17,7 +17,7 @@ type
     (*!-----------------------------------------------
      * Factory for controller TUserListingView
      *
-     * @author [[AUTHOR_NAME]] <[[AUTHOR_EMAIL]]>
+     * @author Zamrony P. Juhara <zamronypj@yahoo.com>
      *------------------------------------------------*)
     TUserListingViewFactory = class(TFactory)
     public

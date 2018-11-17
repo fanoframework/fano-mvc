@@ -18,7 +18,7 @@ type
     (*!-----------------------------------------------
      * view that is compose from several view
      *
-     * @author [[AUTHOR_NAME]] <[[AUTHOR_EMAIL]]>
+     * @author Zamrony P. Juhara <zamronypj@yahoo.com>
      *------------------------------------------------*)
     TCompositeView = class(TInterfacedObject, IView, IDependency)
     private

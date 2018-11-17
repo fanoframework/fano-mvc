@@ -17,7 +17,7 @@ type
     (*!-----------------------------------------------
      * Factory for model TUserModel
      *
-     * @author [[AUTHOR_NAME]] <[[AUTHOR_EMAIL]]>
+     * @author Zamrony P. Juhara <zamronypj@yahoo.com>
      *------------------------------------------------*)
     TUserModelFactory = class(TFactory)
     public
