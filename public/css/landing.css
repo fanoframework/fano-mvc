@@ -1,0 +1,23 @@
+html,body {
+  font-family: 'Open Sans', serif;
+}
+.hero .nav, .hero.is-success .nav {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.hero .subtitle {
+  padding: 3rem 0;
+  line-height: 1.5;
+}
+
+.hero-head h1 {
+    font-size: 2.0em;
+}
+
+.hero.is-info {
+    background-color: #1d3b4e;
+}
+
+.hero.is-info.error {
+    background-color: #f3440b;
+}
