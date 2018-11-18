@@ -24,7 +24,7 @@ Clone this repository
 
 `--recursive` is needed so git also pull [Fano](https://github.com/fanoframework/fano) repository.
 
-If you are missing `--recursive` when you clone, you may find that `fano` directory is empty. In this case run
+If you are missing `--recursive` when you clone, you may find that `vendor/fano` directory is empty. In this case run
 
     $ git submodule update --init
 
