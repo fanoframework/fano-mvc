@@ -37,6 +37,6 @@ uses
 
     function TUserModelFactory.build(const container : IDependencyContainer) : IDependency;
     begin
-        result := TUserModel.create(extractFileDir(getCurrentDir()) + '/src/App/User/Models/users.json');
+        result := TUserModel.create(extractFileDir(getCurrentDir()) + '/data/users.json');
     end;
 end.
