@@ -83,7 +83,7 @@ implementation
                   '</tr>' +
                 '</thead><tbody>'
             );
-            while userData.next() do
+            while not userData.eof() do
             begin
                 respBody.write(
                     '<tr>' +
@@ -92,6 +92,7 @@ implementation
                     '<td>' + userData.readString('email') + '</td>' +
                     '</tr>'
                 );
+                userData.next();
             end;
             respBody.write('</tbody></table></div></div>');
         end;

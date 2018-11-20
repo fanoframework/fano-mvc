@@ -41,7 +41,14 @@ type
          *-----------------------------------------------
          * @return total data
          *-----------------------------------------------*)
-        function count() : integer;
+        function count() : int64;
+
+        (*!------------------------------------------------
+         * test if in end of result set
+         *-----------------------------------------------
+         * @return true if no more record
+         *-----------------------------------------------*)
+        function eof() : boolean;
 
         (*!------------------------------------------------
          * move data pointer to next record
@@ -87,7 +94,7 @@ uses
         fstr:= TFileStream.create(jsonFilename, fmOpenRead or fmShareDenyWrite);
         try
           jsonData := getJSON(fstr);
-          cursorPtr := -1;
+          cursorPtr := 0;
         finally
             fstr.free();
         end;
@@ -104,9 +111,25 @@ uses
      *-----------------------------------------------
      * @return total data
      *-----------------------------------------------*)
-    function TUserModel.count() : integer;
+    function TUserModel.count() : int64;
     begin
         result := jsonData.findPath('totalRecords').asInteger;
+    end;
+
+    (*!------------------------------------------------
+     * test if in end of result set
+     *-----------------------------------------------
+     * @return true if no more record
+     *-----------------------------------------------*)
+    function TUserModel.eof() : boolean;
+    var totalRecord : integer;
+    begin
+        totalRecord := count();
+        result := not (
+            (cursorPtr >= 0) and
+            (totalRecord > 0) and
+            (cursorPtr < totalRecord)
+        );
     end;
 
     (*!------------------------------------------------
@@ -115,15 +138,9 @@ uses
      * @return true if successful, false if no more record
      *-----------------------------------------------*)
     function TUserModel.next() : boolean;
-    var totalRecord : integer;
     begin
-        result := false;
-        totalRecord := count();
-        if ((totalRecord > 0) and (cursorPtr < totalRecord-1)) then
-        begin
-            inc(cursorPtr);
-            result := true;
-        end;
+        inc(cursorPtr);
+        result := true;
     end;
 
     (*!------------------------------------------------
