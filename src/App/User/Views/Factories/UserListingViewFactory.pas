@@ -33,14 +33,20 @@ uses
     {*! -------------------------------
         unit interfaces
     ----------------------------------- *}
-    CompositeView,
     UserListingView;
 
     function TUserListingViewFactory.build(const container : IDependencyContainer) : IDependency;
+    var headerAndContentView : IView;
     begin
-        result := TCompositeView.create(
+        //TCompositeView can only compose from two views
+        //We need to display three views: header part, main content, and footer
+        //so we need to daisy-chained two composite view
+        headerAndContentView := TCompositeView.create(
             container.get('headerView') as IView,
-            TUserListingView.create(container.get('user.list') as IModelReader),
+            TUserListingView.create(container.get('user.list') as IModelReader)
+        );
+        result := TCompositeView.create(
+            headerAndContentView,
             container.get('footerView') as IView
         );
     end;
