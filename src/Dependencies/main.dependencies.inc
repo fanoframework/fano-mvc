@@ -20,7 +20,7 @@
    register application simple router instance
    Replace with your own implementation if required
  ------------------------------------------------}
- container.add('router', TSimpleRouteCollectionFactory.create());
+ container.add('router', TSimpleRouterFactory.create());
 
  {-----------------------------------------------
    setup application request dispatcher
