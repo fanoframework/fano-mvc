@@ -5,12 +5,37 @@ Web application skeleton using Fano, Pascal web application framework
 ## Requirement
 
 - [Free Pascal](https://www.freepascal.org/) >= 3.0
+- [libcurl development](https://curl.haxx.se/libcurl/)
 - Web Server (Apache, nginx)
-- [Fano Web Framework](https://github.com/fanoframework/fano)
+- [Fano Framework](https://github.com/fanoframework/fano)
 
 ## Installation
 
 ### Build
+
+#### libcurl development package installation
+
+Check if libcurl package for development is installed by running `curl-config`.
+
+```
+$ curl-config --version
+```
+If libcurl installed you will get something like `libcurl x.xx.x` where `x.xx.x` is version. For example `libcurl 7.47.0` otherwise you get
+
+```
+The program 'curl-config' can be found in the following packages:
+ * libcurl4-gnutls-dev
+ * libcurl4-nss-dev
+ * libcurl4-openssl-dev
+Try: sudo apt install <selected package>
+```
+
+In case libcurl not installed, run
+```
+$ sudo apt install libcurl4-gnutls-dev
+```
+
+### Free Pascal installation
 
 Make sure [Free Pascal](https://www.freepascal.org/) is installed. Run
 
