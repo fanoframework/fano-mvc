@@ -1,9 +1,9 @@
 (*!------------------------------------------------------------
  * Fano Web Framework Skeleton Application (https://fanoframework.github.io)
  *
- * @link      https://github.com/fanoframework/fano-app
+ * @link      https://github.com/fanoframework/fano-mvc
  * @copyright Copyright (c) 2018 Zamrony P. Juhara
- * @license   https://github.com/fanoframework/fano-app/blob/master/LICENSE (GPL 3.0)
+ * @license   https://github.com/fanoframework/fano-mvc/blob/master/LICENSE (GPL 3.0)
  *------------------------------------------------------------- *)
 unit UserListingView;
 
@@ -64,7 +64,7 @@ implementation
         const viewParams : IViewParameters;
         const response : IResponse
     ) : IResponse;
-    var userData : IModelReadOnlyData;
+    var userData : IModelResultSet;
         respBody : IResponseStream;
     begin
         userData := userModel.data();

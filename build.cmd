@@ -10,13 +10,14 @@ REM ------------------------------------
 REM -- build script for Windows
 REM ------------------------------------
 
-SET FANO_DIR="vendor/fano"
 
+IF NOT DEFINED FANO_DIR (SET FANO_DIR="vendor/fano")
 IF NOT DEFINED BUILD_TYPE (SET BUILD_TYPE="prod")
 IF NOT DEFINED USER_APP_DIR (SET USER_APP_DIR="src")
 IF NOT DEFINED UNIT_OUTPUT_DIR (SET UNIT_OUTPUT_DIR="bin\unit")
 IF NOT DEFINED EXEC_OUTPUT_DIR (SET EXEC_OUTPUT_DIR="public")
 IF NOT DEFINED EXEC_OUTPUT_NAME (SET EXEC_OUTPUT_NAME="app.cgi")
 IF NOT DEFINED SOURCE_PROGRAM_NAME (SET SOURCE_PROGRAM_NAME="app.pas")
+IF NOT DEFINED FPC_BIN (SET FPC_BIN="fpc")
 
-fpc @vendor/fano/fano.cfg @build.cfg %USER_APP_DIR%\%SOURCE_PROGRAM_NAME%
+%FPC_BIN% @vendor/fano/fano.cfg @build.cfg %USER_APP_DIR%\%SOURCE_PROGRAM_NAME%

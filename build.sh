@@ -11,7 +11,10 @@
 # Build script for Linux
 #------------------------------------------------------
 
+
+if [[ -z "${FANO_DIR}" ]]; then
 export FANO_DIR="vendor/fano"
+fi
 
 if [[ -z "${BUILD_TYPE}" ]]; then
 export BUILD_TYPE="prod"
@@ -34,7 +37,11 @@ export EXEC_OUTPUT_NAME="app.cgi"
 fi
 
 if [[ -z "${SOURCE_PROGRAM_NAME}" ]]; then
-SOURCE_PROGRAM_NAME="app.pas"
+export SOURCE_PROGRAM_NAME="app.pas"
 fi
 
-fpc @vendor/fano/fano.cfg @build.cfg ${USER_APP_DIR}/${SOURCE_PROGRAM_NAME}
+if [[ -z "${FPC_BIN}" ]]; then
+export FPC_BIN="fpc"
+fi
+
+${FPC_BIN} @vendor/fano/fano.cfg @build.cfg ${USER_APP_DIR}/${SOURCE_PROGRAM_NAME}
