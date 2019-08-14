@@ -46,8 +46,7 @@ uses
                 .setVar('baseUrl', config.getString('baseUrl'))
                 .setVar('appName', config.getString('appName'));
             result := TUserController.create(
-                routeMiddlewares.getBefore(),
-                routeMiddlewares.getAfter(),
+                routeMiddlewares,
                 container.get('userListingView') as IView,
                 viewParams,
                 container.get('user.list') as IModelReader

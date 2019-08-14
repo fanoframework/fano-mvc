@@ -28,8 +28,7 @@ type
         userList : IModelReader;
     public
         constructor create(
-            const beforeMiddlewares : IMiddlewareCollection;
-            const afterMiddlewares : IMiddlewareCollection;
+            const aMiddlewares : IMiddlewareCollectionAware;
             const viewInst : IView;
             const viewParamsInst : IViewParameters;
             const userListModel : IModelReader
@@ -45,14 +44,13 @@ type
 implementation
 
     constructor TUserController.create(
-        const beforeMiddlewares : IMiddlewareCollection;
-        const afterMiddlewares : IMiddlewareCollection;
+        const aMiddlewares : IMiddlewareCollectionAware;
         const viewInst : IView;
         const viewParamsInst : IViewParameters;
         const userListModel : IModelReader
     );
     begin
-        inherited create(beforeMiddlewares, afterMiddlewares, viewInst, viewParamsInst);
+        inherited create(aMiddlewares, viewInst, viewParamsInst);
         userList := userListModel;
     end;
 
