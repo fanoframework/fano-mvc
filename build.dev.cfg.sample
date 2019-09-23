@@ -8,7 +8,7 @@
 
 #----------------------------------------------
 # User configuration for development build
-# Please see FreePascal Documentation for available
+# Please see Free Pascal Documentation for available
 # compiler switch configurations
 #----------------------------------------------
 
@@ -76,7 +76,7 @@
 #----------------------------------------------
 # Verbose unit searching info,
 # Remove comment, in case unit file is not found
-# so FreePascal will output verbose message where
+# so Free Pascal will output verbose message where
 # it tries to look for unit file
 #----------------------------------------------
 #-vut
