@@ -21,10 +21,9 @@ begin
      *
      * @author AUTHOR_NAME <author@email.tld>
      *------------------------------------------------*)
-    appInstance := TBootstrapApp.create(
-        TDependencyContainer.create(TDependencyList.create()),
-        TCGIEnvironment.create(),
-        TErrorHandler.create()
+    appInstance := TCgiWebApplication.create(
+        TAppServiceProvider.create(),
+        TAppRoutes.create()
     );
     appInstance.run();
 end.
