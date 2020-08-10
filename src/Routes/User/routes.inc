@@ -6,4 +6,5 @@
  * @license   https://github.com/fanoframework/fano-mvc/blob/master/LICENSE (GPL 3.0)
  *------------------------------------------------------------- *)
 
-router.get('/user', container.get('userController') as IRouteHandler);
+router.get('/', container.get('userController') as IRequestHandler);
+router.get('/user', container.get('userController') as IRequestHandler);

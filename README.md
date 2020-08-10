@@ -206,14 +206,14 @@ When running `build.sh` script, you may encounter following warning:
 /usr/bin/ld: warning: public/link.res contains output sections; did you forget -T?
 ```
 
-This is known issue between FreePascal and GNU Linker. See
+This is known issue between Free Pascal and GNU Linker. See
 [FAQ: link.res syntax error, or "did you forget -T?"](https://www.freepascal.org/faq.var#unix-ld219)
 
 However, this warning is minor and can be ignored. It does not affect output executable.
 
 ### Issue with unsynchronized compiled unit with unit source
 
-Sometime FreePascal can not compile your code because, for example, you deleted a
+Sometime Free Pascal can not compile your code because, for example, you deleted a
 unit source code (.pas) but old generated unit (.ppu, .o, .a files) still there
 or when you switch between git branches. Solution is to remove those files.
 

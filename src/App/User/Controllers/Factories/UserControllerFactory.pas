@@ -34,26 +34,18 @@ uses
     UserController;
 
     function TUserControllerFactory.build(const container : IDependencyContainer) : IDependency;
-    var routeMiddlewares : IMiddlewareCollectionAware;
-        config : IAppConfiguration;
+    var config : IAppConfiguration;
         viewParams : IViewParameters;
     begin
-        routeMiddlewares := container.get('routeMiddlewares') as IMiddlewareCollectionAware;
-        try
-            config := container.get('config') as IAppConfiguration;
-            viewParams := container.get('viewParams') as IViewParameters;
-            viewParams
-                .setVar('baseUrl', config.getString('baseUrl'))
-                .setVar('appName', config.getString('appName'));
-            result := TUserController.create(
-                routeMiddlewares.getBefore(),
-                routeMiddlewares.getAfter(),
-                container.get('userListingView') as IView,
-                viewParams,
-                container.get('user.list') as IModelReader
-            );
-        finally
-            routeMiddlewares := nil;
-        end;
+        config := container.get('config') as IAppConfiguration;
+        viewParams := container.get('viewParams') as IViewParameters;
+        viewParams
+            .setVar('baseUrl', config.getString('baseUrl'))
+            .setVar('appName', config.getString('appName'));
+        result := TUserController.create(
+            container.get('userListingView') as IView,
+            viewParams,
+            container.get('user.list') as IModelReader
+        );
     end;
 end.

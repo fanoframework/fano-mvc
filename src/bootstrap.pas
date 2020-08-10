@@ -15,11 +15,17 @@ uses
 
 type
 
-    TBootstrapApp = class(TFanoWebApplication)
-    protected
-        procedure buildDependencies(const container : IDependencyContainer); override;
-        procedure buildRoutes(const container : IDependencyContainer); override;
-        function initDispatcher(const container : IDependencyContainer) : IDispatcher; override;
+    TAppServiceProvider = class(TBasicAppServiceProvider)
+    public
+        procedure register(const container : IDependencyContainer); override;
+    end;
+
+    TAppRoutes = class(TRouteBuilder)
+    public
+        procedure buildRoutes(
+            const container : IDependencyContainer;
+            const router : IRouter
+        ); override;
     end;
 
 implementation
@@ -39,24 +45,16 @@ uses
     FooterViewFactory;
 
 
-    procedure TBootstrapApp.buildDependencies(const container : IDependencyContainer);
+    procedure TAppServiceProvider.register(const container : IDependencyContainer);
     begin
         {$INCLUDE Dependencies/dependencies.inc}
     end;
 
-    procedure TBootstrapApp.buildRoutes(const container : IDependencyContainer);
-    var router : IRouter;
+    procedure TAppRoutes.buildRoutes(
+        const container : IDependencyContainer;
+        const router : IRouter
+    );
     begin
-        router := container.get('router') as IRouter;
-        try
-            {$INCLUDE Routes/routes.inc}
-        finally
-            router := nil;
-        end;
-    end;
-
-    function TBootstrapApp.initDispatcher(const container : IDependencyContainer) : IDispatcher;
-    begin
-        result := container.get('dispatcher') as IDispatcher;
+        {$INCLUDE Routes/routes.inc}
     end;
 end.
